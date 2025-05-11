@@ -23,7 +23,7 @@ A Python script that processes and sorts text files with advanced filtering opti
 ### Setup
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/text-file-sorter.git
+   git clone https://github.com/thebasedtaka/Line-Sorter.git
    cd text-file-sorter
    ```
 
