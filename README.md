@@ -1,6 +1,9 @@
-```markdown
-# Text File Sorter
+# ⚙️ Line Sorter
 
+[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
+[![CLI](https://img.shields.io/badge/CLI-Expertise-important?style=for-the-badge)](https://en.wikipedia.org/wiki/Command-line_interface)
+
+```markdown
 A Python script that processes and sorts text files with advanced filtering options.
 
 ## Features
