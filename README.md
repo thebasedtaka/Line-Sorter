@@ -1,5 +1,3 @@
-Here's the complete, ready-to-use `README.md` for your GitHub repository:
-
 ```markdown
 # Text File Sorter
 
