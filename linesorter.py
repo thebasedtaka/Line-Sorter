@@ -23,7 +23,7 @@ def sort_file(input):
         print(f"An unexpected error occurred: {e}")
 
 #print file logic
-def print_file(sentence_list, output_location, output_mode):
+def print_file(sentence_list, output_location, output_mode="console"):
         #print to file
         if (output_mode == "file"):
             with open(output_location, "w") as outfile:
@@ -36,13 +36,14 @@ def print_file(sentence_list, output_location, output_mode):
 
 if __name__ == "__main__":
     #Take console inputs
-    parser = argparse.ArgumentParser(description='Sort lines in a text file, removing non-ASCII and dash-only lines',formatter_class=argparse.RawDescriptionHelpFormatter, epilog="""Examples: %(prog)s input.txt %(prog)s input.txt -o output.txt %(prog)s input.txt -p console""")
-    parser.add_argument("input_file", help="Input text file to process")
+    parser = argparse.ArgumentParser(description='Sort lines in a text file, removing non-ASCII and dash-only lines',formatter_class=argparse.RawDescriptionHelpFormatter, epilog="""Examples: %(prog)s -o output.txt -i input.txt -p console""")
+    parser.add_argument("-i", "--input", dest="input_file", help="Input text file to process", required=True)
     parser.add_argument("-o", "--output", default='sorted.txt', help="Output file name (default: %(default)s)")
-    parser.add_argument("-p", "--print", choices=['file', 'console'], default='file', help="Output destination (default: %(default)s)")
+    parser.add_argument("-p", "--print", choices=['file', 'console'], default='console', help="Output destination (default: %(default)s)")
     
     #parse console input and run program 
     args = parser.parse_args()
+    
     sentences = sort_file(args.input_file)
 
     print_file(sentences, args.output, args.print)
